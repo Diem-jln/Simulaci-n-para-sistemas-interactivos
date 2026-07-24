@@ -73,39 +73,41 @@ Se me ocurrio que en lugar de hacer una "salpicadura" unidimensional de puntos n
 > *Diseño de una experiencia generativa en tiempo real (Formato 9:16) para un festival de ciencia.*
 
 ### 1. Enlace al Prototipo Final
-* 🔗 **[Link a mi experiencia generativa en p5.js]**
+https://editor.p5js.org/Diem-jln/sketches/Q7c9WJFzT
 
 ### 2. Intención Conceptual
 > *¿Cómo tradujiste cada concepto a reglas visuales y de comportamiento?*
-* **Posibilidad:** [Explica cómo lograste que todas las direcciones parezcan posibles].
-* **Tendencia:** [Explica cómo se construye visualmente una dirección a partir de pequeñas preferencias].
-* **Normalidad:** [Explica cómo lograste que la mayoría de recorridos permanezcan cerca de lo habitual].
-* **Excepción:** [Explica qué evento improbable programaste para descubrir un territorio nuevo].
-* **Influencia (Interacción):** [Explica cómo la presencia/interacción del visitante modifica las reglas/probabilidades sin controlar el sistema].
+* **Posibilidad:** se le dio la capacidad a cada semi circulo de rotar libremente hacia cualquier angulo.
+* **Tendencia:** Utilizando Ruido Perlin. Estas pequeñas fuerzas matemáticas, continuas y repetitivas, obligan a los semi circulos a alinearse gradualmente creando patrones visuales que dirigen el flujo general.
+* **Normalidad:** : Implementando una oscilación Gaussiana. Ya que unque la corriente intente llevarlos, cada dial tiene un leve temblor, y estadísticamente, la gran mayoría se desvía muy poco de la corriente principal.
+* **Excepción:** Programando saltos aleatorios mediante el algoritmo de Vuelo de Lévy. De manera infrecuente pero garantizada, un "glitch" color ámbar interrumpe el patrón.
+* **Influencia (Interacción):** Convirtiendo el raton en una fuente de "calor". Al acercarse, el espectador no controla los diales manualmente, pero su proximidad aumenta la rotación, revela colores ocultos y, a nivel general, desestabiliza el sistema acelerando el tiempo y duplicando la probabilidad de que ocurran "excepciones".
 
 ### 3. Proceso de Desarrollo
-* **Conceptos técnicos integrados:** [Menciona los 3 o más que usaste: Random Walk, Ruido Perlin, Normal, Lévy, etc.]
+* **Conceptos técnicos integrados:** 1. Ruido Perlin: Utilizado para dirigir la Tendencia. 2. Distribución Gaussiana: Aplicada para la Normalidad 3. Vuelos de Lévy: Utilizado para la Excepción.
 * **Experimentos y versiones intermedias:** 
-  * [Sube capturas de pantalla de versiones previas aquí o describe los intentos fallidos].
+  *V1. https://editor.p5js.org/Diem-jln/sketches/_MtgsysGc
+  * V2: https://editor.p5js.org/Diem-jln/sketches/2fl45bEKU.
 * **Decisiones tomadas y alternativas descartadas:**
-  * [Escribe por qué elegiste un camino visual o matemático y por qué descartaste otro].
+  * Descarte la posibilidad de mover objetos por la pantalla de manera libre para ahorrar procesamiento.
 * **Dificultades y soluciones:**
-  * [Menciona los bugs o problemas lógicos que enfrentaste y cómo los resolviste].
+  * El editor web detenía el código creyendo por error que teníamos un bucle infinito en la estadística. Solución: Escribir el comando // noprotect en la primera línea del archivo.
 
 ### 4. Uso de IA Generativa
-* **Prompt/Uso:** [Ej: Le pedí a ChatGPT que me explicara cómo mapear el ruido Perlin a un sistema de partículas].
-* **Cambios realizados:** [Explica qué ajustaste del código que te dio la IA para adaptarlo a tu propio estilo y necesidades].
+* **Prompt/Uso:** Lo primero que le pedí a la IA fue ayuda para aterrizar el concepto que tenía en mente y visualizarlo en una estructura básica de código. A partir de ahí, utilicé la IA como un asistente de programación para escalar iteraciones, resolver cuellos de botella matemáticos y ajustar el sistema a la estética y comportamiento exactos que buscaba.
+* **Cambios realizados:** 1.La IA inicialmente sugirió sistemas de partículas convencionales moviéndose por la pantalla. Lo descarté y reestructuré el código por completo hacia una matriz fija (la cuadrícula de semicírculos) para lograr el efecto de ilusión óptica
+* 2. El código base de la IA para "Vuelos de Lévy" estaba pensado para mover una partícula en el espacio. Yo modifiqué esa lógica para que, en su lugar, seleccionara posiciones aleatorias en la cuadrícula y generara los "cortocircuitos" de color.
 
 ### 5. Tabla de Autoevaluación
 > *Completa marcando con una "X" la casilla correspondiente y escribiendo la evidencia.*
 
 | Criterio | Cumplo | No cumplo | Evidencia |
 | :--- | :---: | :---: | :--- |
-| **Encargo completo:** interpreto los cinco momentos dentro de un mismo sistema visual. | [ ] | [ ] | [Explica en qué parte del código o canvas se ven los 5 momentos integrados] |
-| **Simulación con intención:** utilizo al menos tres conceptos de la unidad para comunicar las ideas del encargo. | [ ] | [ ] | [Menciona las 3 técnicas usadas y cómo aportan a la idea] |
-| **Interacción significativa:** la interacción modifica el comportamiento o las probabilidades del sistema, que también funciona sin intervención. | [ ] | [ ] | [Describe qué tecla o acción del mouse altera la probabilidad y qué pasa cuando no se hace nada] |
-| **Prototipo funcional:** la experiencia puede ejecutarse y recorrerse completa sin errores que impidan comprenderla. | [ ] | [ ] | [Confirma que el enlace funciona a pantalla completa en 9:16] |
-| **Proceso documentado:** la bitácora evidencia avances, decisiones, dificultades, soluciones, uso de IA y enlace al prototipo. | [ ] | [ ] | [Todo este documento de GitHub sirve de evidencia] |
+| **Encargo completo:** interpreto los cinco momentos dentro de un mismo sistema visual. | [ ] | [ ] |
+| **Simulación con intención:** utilizo al menos tres conceptos de la unidad para comunicar las ideas del encargo. | [ ] | [ ] |
+| **Interacción significativa:** la interacción modifica el comportamiento o las probabilidades del sistema, que también funciona sin intervención. | [ ] | [ ] |
+| **Prototipo funcional:** la experiencia puede ejecutarse y recorrerse completa sin errores que impidan comprenderla. | [ ] | [ ] |
+| **Proceso documentado:** la bitácora evidencia avances, decisiones, dificultades, soluciones, uso de IA y enlace al prototipo. | [ ] | [ ] |
 
 ---
 
