@@ -1,0 +1,76 @@
+# Unidad 2: Movimiento - Una Contradicción en Movimiento
+
+**Estudiante:** Diego Sebastián Molina Julián 
+**Curso:** Simulación de sistemas interactivos 
+
+---
+
+## 1. Exploración y Referentes (Actividades 01 a 03)
+*En esta sección documentas tus primeras impresiones antes de programar el reto final.*
+
+* **Reflexión sobre Max Cooper:** ¿Qué ideas me llevo sobre usar la tecnología como medio y no como fin?
+* **Motion 101:** Apuntes breves sobre la física computacional básica (posición, velocidad, aceleración).
+* **Análisis de Particle Life:** Observaciones sobre cómo reglas simples (atracción/repulsión) generaron comportamientos complejos en mis primeras pruebas con el código de Tom Mohr o Jeffrey Ventrella.
+
+---
+
+## 2. Reto de Diseño: Diseño Generativo (Actividades 04 y 05)
+*El núcleo del proyecto. Aquí se define el sistema y sus reglas.*
+
+### 2.1 Intención Conceptual (La Tensión)
+* **Tensión:** Quiero explorar la tensión entre __________ y __________.
+* **Descripción:** [Explica brevemente cómo esperas que esta tensión se manifieste visualmente en el comportamiento de las partículas, sin depender solo de colores o símbolos].
+
+### 2.2 Diseño del Sistema y Parámetros
+*Aquí justifico mis decisiones técnicas basándome en mi intención.*
+
+* **Entidades (Tipos y Cantidades):** 
+  * *Tipo A:* [Cantidad] - [Rol en el sistema]
+  * *Tipo B:* [Cantidad] - [Rol en el sistema]
+* **Relaciones (Matriz de Atracción/Repulsión):** 
+  * *[Inserta aquí una tabla o imagen de tu matriz de interacciones]*
+* **Justificación de Reglas (La fórmula del curso):**
+  * *Seleccioné* [X fricción / Y distancia] *porque quiero hacer perceptible* [la resistencia al cambio / la invasión del espacio]. *Espero que produzca* [agrupamientos lentos / persecuciones caóticas].
+
+### 2.3 Invariantes y Variabilidad
+* **Invariantes:** ¿Qué cosas nunca cambian para que mi sistema conserve su identidad? (Ej. La velocidad máxima, el tamaño del lienzo).
+* **Variabilidad:** ¿Qué cosas cambian en cada ejecución? (Ej. La posición inicial de las partículas, una pequeña variación en la fuerza de atracción).
+
+---
+
+## 3. Registro de Pruebas y Proceso (Curaduría)
+*La historia de cómo evolucionó el código.*
+
+### 3.1 Primeros Experimentos
+* **Prueba 1:** [Descripción de lo que intentaste] - *Resultado:* [Imagen o GIF]
+* **Prueba 2:** [Descripción] - *Resultado:* [Imagen o GIF]
+
+### 3.2 Los Descartes (¡Muy importante!)
+* **¿Qué salió mal o no comunicaba la idea?** [Explica qué parámetros descartaste. Ej: "Le puse demasiada velocidad a las partículas rojas y se perdía la sensación de lentitud que quería transmitir, así que lo descarté"].
+
+---
+
+## 4. Manifestaciones Finales (Resultados)
+*Muestra de la variabilidad del sistema terminado.*
+
+* **Ejecución 1 (Semilla A):** [Imagen o GIF representativo]
+* **Ejecución 2 (Semilla B):** [Imagen o GIF representativo]
+* **Ejecución 3 (Semilla C):** [Imagen o GIF representativo]
+* *Breve reflexión:* Explicación de qué parte del movimiento en estas imágenes fue diseñada por mí (reglas) y qué parte emergió sola (comportamiento inesperado).
+
+---
+
+## 5. Autoevaluación Sustentada
+*De acuerdo con la rúbrica del curso (0% a 100% por criterio).*
+
+| Criterio | Peso | Mi Valoración (%) | Aporte |
+| :--- | :---: | :---: | :---: |
+| La intención es clara y perceptible en el comportamiento. | 20% | [Tu %] | [Aporte] |
+| Tipos, cantidades, matriz y parámetros justificados. | 25% | [Tu %] | [Aporte] |
+| Comprendo y puedo modificar el funcionamiento técnico. | 20% | [Tu %] | [Aporte] |
+| El sistema produce variaciones con identidad reconocible. | 15% | [Tu %] | [Aporte] |
+| Experimenté, comparé, seleccioné y descarté con criterios. | 10% | [Tu %] | [Aporte] |
+| Puedo distinguir y sustentar lo diseñado y lo emergente. | 10% | [Tu %] | [Aporte] |
+| **Puntaje Total** | **100%** | | **[Total]** |
+
+* **Nota Propuesta (Puntaje Total / 20):** [Tu nota de 0 a 5]v 
