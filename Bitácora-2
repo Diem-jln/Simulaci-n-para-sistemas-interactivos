@@ -1,76 +1,108 @@
-# Unidad 2: Movimiento - Una Contradicción en Movimiento
-
-**Estudiante:** Diego Sebastián Molina Julián 
-**Curso:** Simulación de sistemas interactivos 
-
----
-
-## 1. Exploración y Referentes (Actividades 01 a 03)
-*En esta sección documentas tus primeras impresiones antes de programar el reto final.*
-
-* **Reflexión sobre Max Cooper:** ¿Qué ideas me llevo sobre usar la tecnología como medio y no como fin?
-* **Motion 101:** Apuntes breves sobre la física computacional básica (posición, velocidad, aceleración).
-* **Análisis de Particle Life:** Observaciones sobre cómo reglas simples (atracción/repulsión) generaron comportamientos complejos en mis primeras pruebas con el código de Tom Mohr o Jeffrey Ventrella.
+# Bitácora de Entrega: Unidad 2 — Movimiento
+> **Reto de diseño:** Una contradicción en movimiento  
+> **Alineación:** *The Nature of Code* (Capítulo 1: Motion 101) & *Particle Life*
 
 ---
 
-## 2. Reto de Diseño: Diseño Generativo (Actividades 04 y 05)
-*El núcleo del proyecto. Aquí se define el sistema y sus reglas.*
+## 1. Intención y Tensión Conceptual
 
-### 2.1 Intención Conceptual (La Tensión)
-* **Tensión:** Quiero explorar la tensión entre __________ y __________.
-* **Descripción:** [Explica brevemente cómo esperas que esta tensión se manifieste visualmente en el comportamiento de las partículas, sin depender solo de colores o símbolos].
-
-### 2.2 Diseño del Sistema y Parámetros
-*Aquí justifico mis decisiones técnicas basándome en mi intención.*
-
-* **Entidades (Tipos y Cantidades):** 
-  * *Tipo A:* [Cantidad] - [Rol en el sistema]
-  * *Tipo B:* [Cantidad] - [Rol en el sistema]
-* **Relaciones (Matriz de Atracción/Repulsión):** 
-  * *[Inserta aquí una tabla o imagen de tu matriz de interacciones]*
-* **Justificación de Reglas (La fórmula del curso):**
-  * *Seleccioné* [X fricción / Y distancia] *porque quiero hacer perceptible* [la resistencia al cambio / la invasión del espacio]. *Espero que produzca* [agrupamientos lentos / persecuciones caóticas].
-
-### 2.3 Invariantes y Variabilidad
-* **Invariantes:** ¿Qué cosas nunca cambian para que mi sistema conserve su identidad? (Ej. La velocidad máxima, el tamaño del lienzo).
-* **Variabilidad:** ¿Qué cosas cambian en cada ejecución? (Ej. La posición inicial de las partículas, una pequeña variación en la fuerza de atracción).
+* **Tensión:** Quiero explorar la tensión entre **la pertenencia colectiva** y **el aislamiento individual**.
+* **Manifestación esperada:** 
+  El sistema hace perceptible cómo la búsqueda excesiva de cohesión puede terminar asfixiando o expulsando al individuo. Una población densa y gregaria atrae a elementos solitarios hasta un umbral crítico; al sobrepasar cierta densidad o cercanía, el grupo se vuelve repelente y hostil, forzando la dispersión violenta y el aislamiento temporal. El movimiento oscila continuamente entre la formación de enjambres ordenados y rupturas caóticas.
 
 ---
 
-## 3. Registro de Pruebas y Proceso (Curaduría)
-*La historia de cómo evolucionó el código.*
+## 2. Definición de Poblaciones (Entidades)
 
-### 3.1 Primeros Experimentos
-* **Prueba 1:** [Descripción de lo que intentaste] - *Resultado:* [Imagen o GIF]
-* **Prueba 2:** [Descripción] - *Resultado:* [Imagen o GIF]
-
-### 3.2 Los Descartes (¡Muy importante!)
-* **¿Qué salió mal o no comunicaba la idea?** [Explica qué parámetros descartaste. Ej: "Le puse demasiada velocidad a las partículas rojas y se perdía la sensación de lentitud que quería transmitir, así que lo descarté"].
+| Especie | Cantidad | Rol / Comportamiento | Justificación de Presencia y Peso |
+| :--- | :--- | :--- | :--- |
+| **Gregaristas (A)** | 180 | Núcleo de cohesión | Representan la masa colectiva; su alto número es necesario para que la fuerza atractiva local alcance masa crítica. |
+| **Exploradores (B)** | 60 | Individuos errantes | Tienen relaciones asimétricas con el grupo; orbitan la masa sin integrarse por completo. |
+| **Disruptores (C)** | 15 | Catalizadores de rechazo | Pocas unidades de alta masa aparente e influencia que quiebran agrupaciones estables cuando el sistema se estanca. |
 
 ---
 
-## 4. Manifestaciones Finales (Resultados)
-*Muestra de la variabilidad del sistema terminado.*
+## 3. Matriz de Interacción y Relaciones
 
-* **Ejecución 1 (Semilla A):** [Imagen o GIF representativo]
-* **Ejecución 2 (Semilla B):** [Imagen o GIF representativo]
-* **Ejecución 3 (Semilla C):** [Imagen o GIF representativo]
-* *Breve reflexión:* Explicación de qué parte del movimiento en estas imágenes fue diseñada por mí (reglas) y qué parte emergió sola (comportamiento inesperado).
+Valores entre `[-1.0, 1.0]`, donde **valores positivos** representan atracción, **negativos** repulsión y **0.0** indiferencia.
 
----
-
-## 5. Autoevaluación Sustentada
-*De acuerdo con la rúbrica del curso (0% a 100% por criterio).*
-
-| Criterio | Peso | Mi Valoración (%) | Aporte |
+| De \ Hacia | A (Gregaristas) | B (Exploradores) | C (Disruptores) |
 | :--- | :---: | :---: | :---: |
-| La intención es clara y perceptible en el comportamiento. | 20% | [Tu %] | [Aporte] |
-| Tipos, cantidades, matriz y parámetros justificados. | 25% | [Tu %] | [Aporte] |
-| Comprendo y puedo modificar el funcionamiento técnico. | 20% | [Tu %] | [Aporte] |
-| El sistema produce variaciones con identidad reconocible. | 15% | [Tu %] | [Aporte] |
-| Experimenté, comparé, seleccioné y descarté con criterios. | 10% | [Tu %] | [Aporte] |
-| Puedo distinguir y sustentar lo diseñado y lo emergente. | 10% | [Tu %] | [Aporte] |
-| **Puntaje Total** | **100%** | | **[Total]** |
+| **A (Gregaristas)** | `+0.45` | `-0.20` | `-0.80` |
+| **B (Exploradores)** | `+0.60` | `+0.10` | `0.00` |
+| **C (Disruptores)** | `+0.30` | `-0.40` | `-0.10` |
 
-* **Nota Propuesta (Puntaje Total / 20):** [Tu nota de 0 a 5]v 
+### Relación Asimétrica Central
+* **Entre A y B:**  
+  * $A \to B = -0.20$ (El grupo rechaza sutilmente al individuo).  
+  * $B \to A = +0.60$ (El individuo desea activamente pertenecer al grupo).  
+  * **Comportamiento esperado:** Se produce un movimiento de persecución unidireccional constante: los exploradores persiguen al enjambre, pero la masa los empuja a la periferia, generando órbitas elípticas inestables alrededor del cúmulo.
+
+---
+
+## 4. Parámetros del Sistema y Justificación
+
+* **Fricción (`friction` = 0.85):** Disipa energía en cada frame; seleccionada para evitar que la aceleración acumulada convierta el sistema en ruido cinético descontrolado y permitir formaciones cuasi-estables.
+* **Velocidad máxima (`maxSpeed` = 4.0):** Limita la velocidad lineal para que el ojo humano pueda rastrear trayectorias y patrones emergentes.
+* **Radio de interacción (`radius` = 120 px):** Define el alcance de influencia. Permite que existan zonas del lienzo con dinámicas independientes antes del contacto global.
+* **Umbral de repulsión cercana (`minRadius` = 25 px):** Todo par de partículas dentro de este rango experimenta repulsión exponencial, simulando volumen espacial y evitando colapsos singulares en un solo punto.
+* **Distribución inicial:** Distribución uniforme aleatoria por cuadrantes, garantizando que cada ejecución comience sin sesgos espaciales.
+
+---
+
+## 5. Invariantes y Variabilidad
+
+* **Invariantes (Identidad del sistema):**
+  * La asimetría entre A y B ($B$ siempre busca a $A$, $A$ evade a $B$).
+  * La regla de amortiguamiento y repulsión corta.
+  * La relación de densidades poblacionales ($A > B \gg C$).
+* **Variabilidad (Manifestaciones distintas):**
+  * Posiciones y velocidades iniciales según la semilla (`seed`).
+  * Número y geometría de los cúmulos que emergen (pueden ser filamentos o anillos concéntricos según la condición inicial).
+
+---
+
+## 6. Registro de Pruebas y Curaduría
+
+1. **Iteración 1 (Descarte):**
+   * *Configuración:* Matriz simétrica entre A y B ($A \leftrightarrow B = +0.5$).
+   * *Resultado:* Colapso estático en un solo punto central. No se percibía contradicción, únicamente coalescencia.
+   * *Decisión:* Introducir asimetría y fuerza de corte cercana obligatoria.
+2. **Iteración 2 (Descarte):**
+   * *Configuración:* Disruptores (C) con fuerza $-1.0$ y radio extendido (250 px).
+   * *Resultado:* Explosión perpetua de partículas contra los bordes; el sistema nunca alcanzaba coherencia.
+   * *Decisión:* Reducir población de C a 15 y acotar su radio de interacción a 90 px.
+3. **Iteración 3 (Seleccionada):**
+   * *Configuración:* Matriz asimétrica definitiva + fricción 0.85.
+   * *Resultado:* Se forman 2 o 3 núcleos densos que expulsan filamentos de partículas B, produciendo pulsaciones rítmicas de atracción y expulsión.
+
+---
+
+## 7. Distinción: Lo Diseñado vs. Lo Emergente
+
+* **Lo Diseñado:**
+  * Las leyes locales de atracción/repulsión dependientes de la distancia euclidiana.
+  * La asimetría matemática de las fuerzas relativas.
+  * La resistencia viscosa del medio (fricción).
+* **Lo Emergente:**
+  * La pulsación rítmica del grupo (expansión y contracción sin osciladores programados).
+  * La formación de filamentos en espiral durante la persecución.
+  * La expulsión periódica de elementos periféricos.
+
+---
+
+## 8. Autoevaluación Sustentada
+
+| Criterio | Peso | Valoración | Aporte | Sustentación basada en prototipo y bitácora |
+| :--- | :---: | :---: | :---: | :--- |
+| **La intención es clara y perceptible en el comportamiento.** | 20% | 95% | **19.0%** | El conflicto entre integración y rechazo se evidencia en las órbitas inestables y pulsos del enjambre sin necesidad de recurrir a animaciones predefinidas. |
+| **Los tipos, cantidades, matriz y parámetros están justificados desde la intención.** | 25% | 95% | **23.75%** | Cada peso en la matriz y el tamaño de las poblaciones ($180, 60, 15$) responden a un equilibrio físico intencional entre masa y disrupción. |
+| **Comprendo y puedo modificar el funcionamiento técnico del sistema.** | 20% | 90% | **18.0%** | Dominio del esquema *Motion 101* (posición, velocidad, aceleración) y cálculo de fuerzas por pares con manejo de condiciones de frontera toroidales. |
+| **El sistema produce variaciones con una identidad reconocible.** | 15% | 90% | **13.5%** | Diferentes semillas generan cúmulos de distinta escala, pero todas conservan el patrón de enjambre pulsante y persecución asimétrica. |
+| **Experimenté, comparé, seleccioné y descarté con criterios claros.** | 10% | 95% | **9.5%** | Bitácora documentada con 3 iteraciones formales que justifican el descarte del colapso simétrico y la dispersión caótica. |
+| **Puedo distinguir y sustentar lo diseñado y lo emergente.** | 10% | 90% | **9.0%** | Delimitación conceptual clara entre las reglas mecánicas locales y las dinámicas macroscópicas no programadas directamente. |
+| **TOTAL** | **100%** | — | **92.75%** | **Nota Propuesta: 4.6 / 5.0** |
+
+$$\text{Aporte} = \frac{\text{Valoración} \times \text{Peso}}{100}$$
+
+$$\text{Nota Propuesta} = \frac{92.75}{20} = \mathbf{4.64} \approx \mathbf{4.6}$$
